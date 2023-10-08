@@ -32,6 +32,12 @@
     <link href="{% static 'landingpage/vendor/venobox/venobox.css' %}" rel="stylesheet">
     <link href="{% static 'landingpage/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
     <link href="{% static 'landingpage/vendor/aos/aos.css' %}" rel="stylesheet">
+    <style>
+        body{
+            cursor: url("https://en.cursor.style/cursors/2068-zombie-cursor.svg"), auto;
+            
+        }
+    </style>
 
     {% block head %}
     {% endblock head %}
@@ -60,16 +66,11 @@
                 <img src="{% static 'landingpage/img/nitesh.png' %}" alt="" class="img-fluid rounded-circle">
                 <h1 class="text-light"><a href="{% url 'home' %}#main">NItesh Dhungana</a></h1>
                 <div class="social-links mt-3 text-center">
-                    <!-- <a href="https://twitter.com/_goyalaman" class="twitter"><i class="bx bxl-twitter"></i></a> -->
-                    <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-                    <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
-                    <!-- <a href="{% url 'timeline-home' %}" class="google-plus"><i class="bx bxl-skype"></i></a> -->
-                    <!-- <a href="https://www.linkedin.com/in/ln-amangoyal/" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
-                    <!-- <a href="https://dev.to/goyalaman" class="devto"><i class="bx bxl-dev-to"></i></a> -->
-                    <!-- <a href="https://blog.amangoyal.ml/" class="devto"> -->
-                        <!-- <iconify-icon data-icon="cib-hashnode"></iconify-icon></i> -->
-                    <!-- </a> -->
-                    <!-- <a href="https://github.com/goyal-aman" class="bx-bxl-github"><i class="bx bxl-github"></i></a> -->
+                    <a href="tel:+977-9861800409" class="phone"><i class="bx bx-phone"></i></a>
+                    <a href="https://twitter.com/dh_nitesh" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://facebook.com/dhungananitesh" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="https://github.com/Dhnitesh" class="github"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/dhnitesh/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                 </div>
             </div>
 
@@ -113,6 +114,7 @@
 
     <!-- Template Main JS File -->
     <script src="{% static 'landingpage/js/main.js' %}"></script>
+    <script src="{% static 'trail.js' %}"></script>
 
 </body>
 
