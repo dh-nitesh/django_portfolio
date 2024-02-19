@@ -7,8 +7,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('landingpage.urls')),
-    path('timeline/', include('timeline.urls')),
+    path('gallery/', include('gallery.urls')),
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# if settings.DEBUG:
+#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns += static(f"{settings.MEDIA_URL}", document_root=settings.MEDIA_ROOT)
