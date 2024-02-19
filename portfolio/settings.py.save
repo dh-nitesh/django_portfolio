@@ -17,8 +17,7 @@ from decouple import config
 SECRET_KEY = config("SECRET_KEY", default="")
 DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = ['niteshdhungana.com.np','neetesh.tech']
-CSRF_TRUSTED_ORIGINS=["https://niteshdhungana.com.np","http://neetesh.tech"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,7 +37,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     # heroku middleware
     # 'whitenoise.middleware.WhiteNoiseMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -48,7 +47,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ALLOWED_ORIGINS = ['niteshdhungana.com.np']
+
 ROOT_URLCONF = 'portfolio.urls'
 
 TEMPLATES = [
