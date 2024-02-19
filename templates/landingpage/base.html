@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'landingpage/favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'landingpage/favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'landingpage/favicon/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static 'landingpage/favicon/site.webmanifest' %}">
+    {% comment %} <link rel="manifest" href="{% static 'landingpage/favicon/site.webmanifest' %}"> {% endcomment %}
 
     <!-- Google Fonts -->
     <link
@@ -63,8 +63,9 @@
         <div class="d-flex flex-column">
 
             <div class="profile">
-                <img src="{% static 'landingpage/img/nitesh.png' %}" alt="" class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="{% url 'home' %}#main">NItesh Dhungana</a></h1>
+                {% comment %} {% static 'landingpage/img/nitesh.png' %} {% endcomment %}
+                <img src="{{personal_details.get_profile_picture}}" alt="PP" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="{% url 'home' %}#main">Nitesh Dhungana</a></h1>
                 <div class="social-links mt-3 text-center">
                     <a href="tel:+977-9861800409" class="phone"><i class="bx bx-phone"></i></a>
                     <a href="https://twitter.com/dh_nitesh" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -85,7 +86,7 @@
                     {% comment %} <li><a href="{% url 'home' %}#projects"><i class="bx bx-server"></i> Projects</a></li> {% endcomment %}
                     <li><a href="{% url 'home' %}#contact"><i class="bx bx-envelope"></i> Contact</a></li>
                     <hr color="grey">
-                    <li><a href="{% url 'timeline-home' %}"><i class="bx bx-book-content"></i> Timeline</a></li>
+                    <li><a href="{% url 'gallery:card' %}"><i class="bx bx-image"></i> <span>Gallery</span></a></li>
                 </ul>
             </nav><!-- .nav-menu -->
             <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>

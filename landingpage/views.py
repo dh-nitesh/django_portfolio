@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import View
 
 # models
-from landingpage.models import Project
+from landingpage.models import PersonalDetails, Project
 from download_resume_pdf.models import ResumeLink
 
 # Create your views here.
@@ -12,7 +12,9 @@ class HomePageView(View):
 
     def get(self, request):
         activeResumes = ResumeLink.objects.filter(is_active=True)
+        personal_details = PersonalDetails.objects.filter(is_active=True).last()
         qs = {
+            'personal_details':personal_details,
             'project_data':Project.objects.all(),
             'resume_url': (activeResumes[0] if len(activeResumes) else [])
         }
